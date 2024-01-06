@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "Constant.h"
+#include "TextureHolder.h"
 #include <iostream>
 
 class App {

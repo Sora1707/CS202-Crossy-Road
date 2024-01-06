@@ -26,3 +26,110 @@ namespace constant {
     const std::string INFO    = "[INFO] ";
 
 } // namespace constant
+
+namespace Textures {
+    enum class Player {
+        StartIndex = 1000,
+        Left01     = 1000,
+        Right01,
+        Up01,
+        Down01,
+        Left02,
+        Right02,
+        Up02,
+        Down02,
+        Left03,
+        Right03,
+        Up03,
+        Down03,
+        Left04,
+        Right04,
+        Up04,
+        Down04,
+        Left05,
+        Right05,
+        Up05,
+        Down05,
+        Texture01 = Left01,
+        Texture02 = Left02,
+        Texture03 = Left03,
+        Texture04 = Left04,
+        Texture05 = Left05,
+    };
+
+    enum class Grass {
+        StartIndex = 10,
+        Grass01    = 10,
+        Grass02,
+        Grass03,
+        Grass04,
+        Grass05,
+        Grass06,
+        Count = 6
+    };
+
+    enum class Obstacle {
+        StartIndex = 20,
+        Statue     = 20,
+        SmallRock,
+        BigRock,
+        Tomb,
+        BrokenTomb,
+        Count = 5,
+    };
+
+    enum class River {
+        StartIndex = 30,
+        Default    = 30,
+        WithGrass,
+        LilyPad,
+        Count = 2,
+    };
+
+    enum class Road {
+        StartIndex = 40,
+        Default    = 40,
+        Count      = 1,
+    };
+
+    enum class Rail {
+        StartIndex = 50,
+        Default    = 50,
+        Traffic,
+        TrafficActive,
+        Count = 3,
+    };
+
+    enum class Car {
+        Count  = 5,
+        Left01 = 100,
+        Left02,
+        Left03,
+        Left04,
+        Left05,
+        Right01,
+        Right02,
+        Right03,
+        Right04,
+        Right05,
+    };
+
+    enum class Train {
+        Left = 110,
+        Right,
+    };
+
+    enum class Mountable {
+        Wood = 200,
+    };
+
+    enum class Background {
+        Main = 500,
+    };
+
+    enum class Button {
+        Normal = 600,
+        Active,
+        Hovered
+    };
+} // namespace Textures

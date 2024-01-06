@@ -9,6 +9,8 @@ App::~App() {
 }
 
 void App::run() {
+    TextureHolder* textureHolder = TextureHolder::getInstance();
+
     while (window.isOpen()) {
         processEvents();
         update();
