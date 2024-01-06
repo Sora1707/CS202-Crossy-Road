@@ -135,6 +135,8 @@
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\Constant.cpp" />
+    <ClCompile Include="src\Game\Enemy\Car.cpp" />
+    <ClCompile Include="src\Game\Enemy\Enemy.cpp" />
     <ClCompile Include="src\Game\Entity.cpp" />
     <ClCompile Include="src\Game\Movable.cpp" />
     <ClCompile Include="src\Game\Player.cpp" />
@@ -147,6 +149,8 @@
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\Constant.h" />
+    <ClInclude Include="src\Game\Enemy\Car.h" />
+    <ClInclude Include="src\Game\Enemy\Enemy.h" />
     <ClInclude Include="src\Game\Entity.h" />
     <ClInclude Include="src\Game\Movable.h" />
     <ClInclude Include="src\Game\Player.h" />
