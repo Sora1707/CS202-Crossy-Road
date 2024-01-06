@@ -40,12 +40,25 @@ namespace constant {
     const float CHARACTER_BUTTON_WIDTH  = 200;
     const float CHARACTER_BUTTON_HEIGHT = 200;
 
+    /* ENTITIES */
     // PLAYER: scale 1/1
     const int PLAYER_WIDTH   = 75;
     const int PLAYER_HEIGHT  = 75;
     const int PLAYER_START_X = 7;
     const int PLAYER_START_Y = 5;
     const int PLAYER_SPRITES = 5;
+
+    // CAR
+    const float CAR_WIDTH  = 192;
+    const float CAR_HEIGHT = TILE_SIZE;
+
+    // TRAIN
+    const float TRAIN_WIDTH  = 858;
+    const float TRAIN_HEIGHT = TILE_SIZE;
+
+    // WOOD
+    const float WOOD_WIDTH  = 200;
+    const float WOOD_HEIGHT = TILE_SIZE; 
 
 } // namespace constant
 
