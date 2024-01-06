@@ -18,6 +18,12 @@ namespace constant {
     const int APP_WIDTH              = 1600;
     const int APP_HEIGHT             = 900;
     const std::string APP_TITLE      = "Crossy Road";
+    const int TILE_SIZE              = 100;
+    const int APP_ROW                = 9;
+    const int APP_COLUMN             = 16;
+    const int APP_SAFE_LANE          = 4;
+    const float APP_VELOCITY         = 0.5;
+    const float APP_SPEEDUP_VELOCITY = 5;
 
     // TEXT
     const std::string ERROR   = "[ERROR] ";
