@@ -31,6 +31,15 @@ namespace constant {
     const std::string SUCCESS = "[SUCCESS] ";
     const std::string INFO    = "[INFO] ";
 
+    /* COMPONENTS */
+    // BUTTON
+    const float BUTTON_WIDTH  = 200;
+    const float BUTTON_HEIGHT = 50;
+
+    // CHARACTER BUTTON
+    const float CHARACTER_BUTTON_WIDTH  = 200;
+    const float CHARACTER_BUTTON_HEIGHT = 200;
+
 } // namespace constant
 
 namespace Textures {
