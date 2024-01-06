@@ -3,6 +3,7 @@
 #include <SFML/Audio.hpp>
 #include "Constant.h"
 #include "TextureHolder.h"
+#include "SoundHolder.h"
 #include <iostream>
 
 class App {

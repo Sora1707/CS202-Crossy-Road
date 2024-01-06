@@ -133,3 +133,18 @@ namespace Textures {
         Hovered
     };
 } // namespace Textures
+
+namespace Sound {
+    enum Sound {
+        Start,
+        ButtonMove,
+        ButtonEnter,
+        Car,
+        Train,
+        Log,
+        Hit,
+        PlayerMove,
+        RiverJump,
+        RiverFlow,
+    };
+}

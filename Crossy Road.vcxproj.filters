@@ -22,6 +22,9 @@
     <ClCompile Include="src\TextureHolder.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="src\SoundHolder.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -31,6 +34,9 @@
       <Filter>Global</Filter>
     </ClInclude>
     <ClInclude Include="src\TextureHolder.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SoundHolder.h">
       <Filter>Global</Filter>
     </ClInclude>
   </ItemGroup>

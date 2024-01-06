@@ -136,11 +136,13 @@
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\Constant.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SoundHolder.cpp" />
     <ClCompile Include="src\TextureHolder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\Constant.h" />
+    <ClInclude Include="src\SoundHolder.h" />
     <ClInclude Include="src\TextureHolder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

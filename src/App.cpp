@@ -10,6 +10,7 @@ App::~App() {
 
 void App::run() {
     TextureHolder* textureHolder = TextureHolder::getInstance();
+    SoundHolder& soundHolder     = SoundHolder::getInstance();
 
     while (window.isOpen()) {
         processEvents();
