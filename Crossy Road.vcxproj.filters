@@ -28,6 +28,9 @@
     <ClCompile Include="src\SoundPlayer.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="src\Screen.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -43,6 +46,9 @@
       <Filter>Global</Filter>
     </ClInclude>
     <ClInclude Include="src\SoundPlayer.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Screen.h">
       <Filter>Global</Filter>
     </ClInclude>
   </ItemGroup>

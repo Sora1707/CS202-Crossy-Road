@@ -5,6 +5,7 @@
 #include "TextureHolder.h"
 #include "SoundHolder.h"
 #include "SoundPlayer.h"
+#include "Screen.h"
 #include <iostream>
 
 class App {
@@ -22,6 +23,7 @@ private:
 
 private:
     int currentScreenId;
+    std::shared_ptr<Screen> screens[(int)constant::Screen::Count];
 
     sf::Music bgm;
 

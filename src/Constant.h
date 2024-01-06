@@ -42,6 +42,15 @@ namespace constant {
 
 } // namespace constant
 
+namespace constant {
+    enum class Screen {
+        Menu,
+        Setting,
+        Game,
+        Count
+    };
+}
+
 namespace Textures {
     enum class Player {
         StartIndex = 1000,
