@@ -3,6 +3,15 @@
 App::App() {
     window.create(sf::VideoMode(constant::APP_WIDTH, constant::APP_HEIGHT), constant::APP_TITLE);
     window.setFramerateLimit(constant::APP_FPS);
+
+    std::string bgmFile = "resource/music/Leap to the Beat.mp3";
+    if (!bgm.openFromFile(bgmFile)) {
+        std::cout << constant::ERROR << "Cannot open file " << bgmFile << "\n";
+        window.close();
+        return;
+    }
+    bgm.setLoop(true);
+    bgm.setVolume(50);
 }
 
 App::~App() {
@@ -11,6 +20,8 @@ App::~App() {
 void App::run() {
     TextureHolder* textureHolder = TextureHolder::getInstance();
     SoundHolder& soundHolder     = SoundHolder::getInstance();
+
+    bgm.play();
 
     while (window.isOpen()) {
         processEvents();

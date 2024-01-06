@@ -21,6 +21,8 @@ private:
 private:
     int currentScreenId;
 
+    sf::Music bgm;
+
 
 private:
     void processEvents();
