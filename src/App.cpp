@@ -38,6 +38,9 @@ App::~App() {
 void App::run() {
     TextureHolder* textureHolder = TextureHolder::getInstance();
     SoundHolder& soundHolder     = SoundHolder::getInstance();
+    Player& player               = Player::getInstance();
+
+    player.setSoundPlayer(&soundPlayer);
 
     bgm.play();
 

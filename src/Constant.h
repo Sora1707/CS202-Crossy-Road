@@ -40,6 +40,13 @@ namespace constant {
     const float CHARACTER_BUTTON_WIDTH  = 200;
     const float CHARACTER_BUTTON_HEIGHT = 200;
 
+    // PLAYER: scale 1/1
+    const int PLAYER_WIDTH   = 75;
+    const int PLAYER_HEIGHT  = 75;
+    const int PLAYER_START_X = 7;
+    const int PLAYER_START_Y = 5;
+    const int PLAYER_SPRITES = 5;
+
 } // namespace constant
 
 namespace constant {
@@ -48,6 +55,13 @@ namespace constant {
         Setting,
         Game,
         Count
+    };
+
+    enum class Direction {
+        Left,
+        Right,
+        Up,
+        Down
     };
 }
 

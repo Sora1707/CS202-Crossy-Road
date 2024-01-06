@@ -6,6 +6,7 @@
 #include "SoundHolder.h"
 #include "SoundPlayer.h"
 #include "Screen.h"
+#include "Game/Player.h"
 #include <iostream>
 
 class App {

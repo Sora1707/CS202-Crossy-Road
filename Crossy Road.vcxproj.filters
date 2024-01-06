@@ -8,6 +8,9 @@
     <Filter Include="Global">
       <UniqueIdentifier>{219c3741-d803-4a2f-af5e-a80723e7bb7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Object">
+      <UniqueIdentifier>{444b39f0-0670-4ebd-89e7-07e8e8d28c00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -31,6 +34,15 @@
     <ClCompile Include="src\Screen.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\Player.cpp">
+      <Filter>Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Entity.cpp">
+      <Filter>Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Movable.cpp">
+      <Filter>Game Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -50,6 +62,15 @@
     </ClInclude>
     <ClInclude Include="src\Screen.h">
       <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Player.h">
+      <Filter>Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Entity.h">
+      <Filter>Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Movable.h">
+      <Filter>Game Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
