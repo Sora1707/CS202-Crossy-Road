@@ -25,6 +25,9 @@
     <ClCompile Include="src\SoundHolder.cpp">
       <Filter>Global</Filter>
     </ClCompile>
+    <ClCompile Include="src\SoundPlayer.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -37,6 +40,9 @@
       <Filter>Global</Filter>
     </ClInclude>
     <ClInclude Include="src\SoundHolder.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SoundPlayer.h">
       <Filter>Global</Filter>
     </ClInclude>
   </ItemGroup>

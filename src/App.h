@@ -4,6 +4,7 @@
 #include "Constant.h"
 #include "TextureHolder.h"
 #include "SoundHolder.h"
+#include "SoundPlayer.h"
 #include <iostream>
 
 class App {
@@ -17,6 +18,7 @@ public:
 
 private:
     sf::RenderWindow window;
+    SoundPlayer soundPlayer;
 
 private:
     int currentScreenId;
