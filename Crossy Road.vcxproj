@@ -145,6 +145,7 @@
     <ClCompile Include="src\Game\Player.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Screen.cpp" />
+    <ClCompile Include="src\SettingScreen\SettingScreen.cpp" />
     <ClCompile Include="src\SoundHolder.cpp" />
     <ClCompile Include="src\SoundPlayer.cpp" />
     <ClCompile Include="src\TextureHolder.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="src\Game\Movable.h" />
     <ClInclude Include="src\Game\Player.h" />
     <ClInclude Include="src\Screen.h" />
+    <ClInclude Include="src\SettingScreen\SettingScreen.h" />
     <ClInclude Include="src\SoundHolder.h" />
     <ClInclude Include="src\SoundPlayer.h" />
     <ClInclude Include="src\TextureHolder.h" />
