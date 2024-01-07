@@ -26,7 +26,7 @@ MenuScreen::MenuScreen() {
 }
 
 
-//void MenuScreen::handleEvent(sf::RenderWindow& window, sf::Event& event) {
+void MenuScreen::handleEvent(sf::RenderWindow& window, sf::Event& event) {
     SoundHolder& soundHolder = SoundHolder::getInstance();
 
     // Key pressed events
@@ -53,7 +53,7 @@ MenuScreen::MenuScreen() {
     if (buttons[(int)Type::Exit].isClicked(window)) exit(0);*/
 }
 
-//void MenuScreen::update(sf::RenderWindow& window) {
+void MenuScreen::update(sf::RenderWindow& window) {
     buttons[isActiveId].setTexture(TextureHolder::getInstance()->getTexture((int)Textures::Button::Active));
 
     for (int i = 0; i < (int)Type::Count; ++i) {
