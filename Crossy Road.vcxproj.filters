@@ -52,6 +52,9 @@
     <ClCompile Include="src\Game\Enemy\Train.cpp">
       <Filter>Game Object</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\Mountable\Mountable.cpp">
+      <Filter>Game Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -88,6 +91,9 @@
       <Filter>Game Object</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\Enemy\Train.h">
+      <Filter>Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Mountable\Mountable.h">
       <Filter>Game Object</Filter>
     </ClInclude>
   </ItemGroup>
