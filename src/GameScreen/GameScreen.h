@@ -54,4 +54,9 @@ private:
     bool isPause = false;
     bool newGame = false;
 
+private:
+    sf::Text gameOverText;
+    sf::Text pressEnterText;
+    sf::Text scoreText;
+    sf::Text highestScoreText;
 };
