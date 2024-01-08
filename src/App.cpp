@@ -11,8 +11,8 @@ App::App() {
 
     /* SETTING */
     // Change Screen to Setting Screen later
-    /*screens[(int)constant::Screen::Setting] = std::make_shared<Screen>(); 
-    screens[(int)constant::Screen::Setting]->setSoundPlayer(&soundPlayer);*/
+    screens[(int)constant::Screen::Setting] = std::make_shared<SettingScreen>(); 
+    screens[(int)constant::Screen::Setting]->setSoundPlayer(&soundPlayer);
 
     /* GAME */
     // Change Screen to Game Screen later

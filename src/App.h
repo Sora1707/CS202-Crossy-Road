@@ -9,7 +9,7 @@
 #include "MenuScreen.h"
 #include "Game/Player.h"
 #include <iostream>
-
+#include "SettingScreen.h"
 class App {
 public:
     App();
