@@ -65,3 +65,78 @@ void GameScreen::setStaticText(){
     highestScoreText.setFillColor(sf::Color::Red);
     highestScoreText.setPosition(1300, 10);
 };    
+
+void GameScreen::handleEvent(sf::RenderWindow& window, sf::Event& event) {
+
+    if (event.type == event.KeyPressed) {
+        if (player.getIsDead()) {
+            if (event.key.code == sf::Keyboard::Enter) {
+                newGame = true;
+            }
+            return;
+        }
+
+        if (event.key.code == sf::Keyboard::Escape) {
+            soundPlayer->addSong(Sound::ButtonEnter, soundPlayer->getVolume());
+            setIsPause(true);
+            setCurrentScreenId((int)constant::Screen::Setting);
+        }
+    }
+
+    if (isPause) return;
+
+    player.handleEvent(window, event);
+}
+
+void GameScreen::update(sf::RenderWindow& window) {
+
+    if (player.isOutOfScreen()) {
+        if (!player.getIsDead())
+            soundPlayer->addSong(Sound::RiverFlow, soundPlayer->getVolume());
+        player.setIsDead(true);
+    }
+    if (player.getIsDead()) return;
+
+    // Pause handle
+    for (Lane* lane : lanes) {
+        SpawnLane* spawnLane = dynamic_cast<SpawnLane*>(lane);
+        if (spawnLane) {
+            spawnLane->setIsActive(!isPause);
+        }
+    }
+
+    if (isPause) return;
+
+     float worldVelocity;
+    if (player.getPosition().y >= constant::APP_HEIGHT * 0.5f) worldVelocity = constant::APP_VELOCITY;
+    else worldVelocity = constant::APP_SPEEDUP_VELOCITY;
+
+    // Generate new road
+    if (lanes.back()->isOutOfScreen()) {
+        float delayPixels = lanes.back()->getPosY() - constant::APP_HEIGHT;
+        delete lanes.back();
+        lanes.pop_back();
+        lanes.push_front(createRandomLane(-constant::TILE_SIZE + delayPixels));
+    }
+    
+    // Moving the world
+    sf::Vector2f enviVelocity = player.getEnviVelocity();
+    enviVelocity.y            = worldVelocity;
+    player.setEnviVelocity(enviVelocity);
+
+    for (Lane* lane : lanes) {
+        float posY = lane->getPosY();
+        lane->setPosY(posY + worldVelocity);
+    }
+
+    // Spawn handle
+    for (Lane* lane : lanes) {
+        SpawnLane* spawnLane = dynamic_cast<SpawnLane*>(lane);
+        if (spawnLane) {
+            spawnLane->handleSpawn();
+        }
+    }
+
+    // Player
+    player.update();
+}
