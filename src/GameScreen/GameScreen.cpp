@@ -140,3 +140,24 @@ void GameScreen::update(sf::RenderWindow& window) {
     // Player
     player.update();
 }
+
+void GameScreen::draw(sf::RenderWindow& window) {
+
+    for (Lane* lane : lanes) {
+        lane->draw(window);
+    }
+
+    window.draw(player);
+
+    scoreText.setString(std::string(std::to_string(player.getScore())));
+    window.draw(scoreText);
+
+    highestScoreText.setString("Highest: " + std::string(std::to_string(player.getHighestScore())));
+    window.draw(highestScoreText);
+
+    if (player.getIsDead()) {
+        window.draw(gameOverText);
+        window.draw(pressEnterText);
+        return;
+    }
+}
