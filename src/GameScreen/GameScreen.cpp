@@ -161,3 +161,106 @@ void GameScreen::draw(sf::RenderWindow& window) {
         return;
     }
 }
+
+void GameScreen::setIsPause(bool state) {
+    isPause = state;
+}
+
+bool GameScreen::needNewGame() {
+    return newGame;
+}
+
+Lane* GameScreen::createRailLane(float posY) {
+    int randomValue               = util::random(0, 1);
+    constant::Direction direction;
+    Train train;
+    if (randomValue == 0) {
+        direction = constant::Direction::Left;
+        train.setTexture(TextureHolder::getInstance()->getTexture((int)Textures::Train::Left));
+    }
+    else {
+        direction = constant::Direction::Right;
+        train.setTexture(TextureHolder::getInstance()->getTexture((int)Textures::Train::Right));
+    }
+    RailLane* railLane = new RailLane();
+    int velocity       = util::random(50, 50);
+    int spawnInterval  = util::random(30, 50) * 100;
+    railLane->setDirection(direction);
+    railLane->setPosY(posY);
+    railLane->setVelocity(velocity);
+    railLane->setSpawnInterval(spawnInterval);
+    railLane->setEnemyBase(train);
+    railLane->spawn();
+    return railLane;
+}
+
+Lane* GameScreen::createRoadLane(float posY) {
+    int directionRandomValue        = util::random(0, 1);
+    int textureRandomValue          = util::random(0, 4);
+    constant::Direction direction;
+    Car car;
+    if (directionRandomValue == 0) {
+        direction = constant::Direction::Left;
+        car.setTexture(TextureHolder::getInstance()->getTexture((int)Textures::Car::Left01 + textureRandomValue));
+    }
+    else {
+        direction = constant::Direction::Right;
+        car.setTexture(TextureHolder::getInstance()->getTexture((int)Textures::Car::Right01 + textureRandomValue));
+    }
+    int velocity = util::random(5, 10);
+    int spawnInterval = util::random(15, 20) * 100;
+    RoadLane* roadLane = new RoadLane();
+    roadLane->setDirection(direction);
+    roadLane->setPosY(posY);
+    roadLane->setVelocity(velocity);
+    roadLane->setSpawnInterval(spawnInterval);
+    roadLane->setEnemyBase(car);
+    roadLane->spawn();
+
+    return roadLane;
+}
+
+Lane* GameScreen::createRiverLane(float posY) {
+    int randomValue = util::random(0, 1);
+    constant::Direction direction;
+    Wood wood;
+    if (randomValue == 0) {
+        direction = constant::Direction::Left;
+    }
+    else {
+        direction = constant::Direction::Right;
+    }
+    int velocity      = util::random(5, 10);
+    int spawnInterval = util::random(10, 20) * 100;
+    RiverLane* riverLane = new RiverLane();
+    riverLane->setDirection(direction);
+    riverLane->setPosY(posY);
+    riverLane->setVelocity(velocity);
+    riverLane->setSpawnInterval(spawnInterval);
+    riverLane->setMountableBase(wood);
+    riverLane->spawn();
+
+    return riverLane;
+}
+
+Lane* GameScreen::createGrassLane(float posY) {
+    GrassLane* lane = new GrassLane();
+    lane->setPosY(posY);
+    return lane;
+}
+
+Lane* GameScreen::createRandomLane(float posY) {
+    /*
+    Rail:  10%
+    River: 20%
+    Road:  30%
+    Grass: 40%
+    */
+
+    int type = util::random(1, 10);
+    if (1 <= type && type <= 1) return createRailLane(posY);
+    if (2 <= type && type <= 3) return createRiverLane(posY);
+    if (4 <= type && type <= 6) return createRoadLane(posY);
+    return createGrassLane(posY);
+    
+}
