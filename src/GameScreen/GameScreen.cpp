@@ -41,3 +41,27 @@ GameScreen::~GameScreen(){
     }
     std::cout << constant::INFO << "Game Screen finished deallocation\n";
 }
+
+void GameScreen::setStaticText(){
+    gameOverText.setString(std::string("Game Over"));
+    gameOverText.setCharacterSize(100);
+    gameOverText.setFont(constant::fontArial);
+    gameOverText.setFillColor(sf::Color::Black);
+    gameOverText.setPosition(constant::APP_WIDTH / 2 - gameOverText.getLocalBounds().width / 2, 200);
+
+    pressEnterText.setString(std::string("Press Enter to continue..."));
+    pressEnterText.setCharacterSize(50);
+    pressEnterText.setFont(constant::fontArial);
+    pressEnterText.setFillColor(sf::Color::Black);
+    pressEnterText.setPosition(constant::APP_WIDTH / 2 - gameOverText.getLocalBounds().width / 2, 400);
+
+    scoreText.setCharacterSize(50);
+    scoreText.setFont(constant::fontArial);
+    scoreText.setFillColor(sf::Color::Red);
+    scoreText.setPosition(10, 10);
+
+    highestScoreText.setCharacterSize(50);
+    highestScoreText.setFont(constant::fontArial);
+    highestScoreText.setFillColor(sf::Color::Red);
+    highestScoreText.setPosition(1300, 10);
+};    
