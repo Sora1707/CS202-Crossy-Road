@@ -134,6 +134,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
+    <ClCompile Include="src\Components\Button.cpp" />
+    <ClCompile Include="src\Components\Component.cpp" />
+    <ClCompile Include="src\Components\ImageButton.cpp" />
+    <ClCompile Include="src\Components\Label.cpp" />
     <ClCompile Include="src\Constant.cpp" />
     <ClCompile Include="src\Game\Enemy\Car.cpp" />
     <ClCompile Include="src\Game\Enemy\Enemy.cpp" />
@@ -144,6 +148,7 @@
     <ClCompile Include="src\Game\Movable.cpp" />
     <ClCompile Include="src\Game\Player.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MenuScreen.cpp" />
     <ClCompile Include="src\Screen.cpp" />
     <ClCompile Include="src\SoundHolder.cpp" />
     <ClCompile Include="src\SoundPlayer.cpp" />
@@ -151,6 +156,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h" />
+    <ClInclude Include="src\Components\Button.h" />
+    <ClInclude Include="src\Components\Component.h" />
+    <ClInclude Include="src\Components\ImageButton.h" />
+    <ClInclude Include="src\Components\Label.h" />
     <ClInclude Include="src\Constant.h" />
     <ClInclude Include="src\Game\Enemy\Car.h" />
     <ClInclude Include="src\Game\Enemy\Enemy.h" />
@@ -160,6 +169,7 @@
     <ClInclude Include="src\Game\Mountable\Wood.h" />
     <ClInclude Include="src\Game\Movable.h" />
     <ClInclude Include="src\Game\Player.h" />
+    <ClInclude Include="src\MenuScreen.h" />
     <ClInclude Include="src\Screen.h" />
     <ClInclude Include="src\SoundHolder.h" />
     <ClInclude Include="src\SoundPlayer.h" />

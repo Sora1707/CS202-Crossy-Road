@@ -1,13 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../Constant.h"
-#include "../Components/Button.h"
-#include "../TextureHolder.h"
-#include "../SoundHolder.h"
+#include "Constant.h"
+#include "Components/Button.h"
+#include "TextureHolder.h"
+#include "SoundHolder.h"
 #include <map>
 #include <iostream>
 
-#include "../Screen.h"
+#include "Screen.h"
 
 class MenuScreen: public Screen {
 private:

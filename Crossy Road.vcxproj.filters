@@ -11,6 +11,12 @@
     <Filter Include="Game Object">
       <UniqueIdentifier>{444b39f0-0670-4ebd-89e7-07e8e8d28c00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MenuScreen">
+      <UniqueIdentifier>{e952d3e3-8c59-4a10-b1ed-1f2b3d99b30e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{fe59fadd-717a-4aa0-ae6f-bcb823073352}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -58,6 +64,21 @@
     <ClCompile Include="src\Game\Mountable\Wood.cpp">
       <Filter>Game Object</Filter>
     </ClCompile>
+    <ClCompile Include="src\MenuScreen.cpp">
+      <Filter>MenuScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\Button.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\ImageButton.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\Label.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -101,6 +122,21 @@
     </ClInclude>
     <ClInclude Include="src\Game\Mountable\Wood.h">
       <Filter>Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MenuScreen.h">
+      <Filter>MenuScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Button.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\ImageButton.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Label.h">
+      <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

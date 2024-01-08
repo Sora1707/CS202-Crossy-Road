@@ -6,8 +6,8 @@ App::App() {
 
     /* MENU */
     // Change Screen to Menu Screen later
-    /*screens[(int)constant::Screen::Menu] = std::make_shared<Screen>(); 
-    screens[(int)constant::Screen::Menu]->setSoundPlayer(&soundPlayer);*/
+    screens[(int)constant::Screen::Menu] = std::make_shared<MenuScreen>(); 
+    screens[(int)constant::Screen::Menu]->setSoundPlayer(&soundPlayer);
 
     /* SETTING */
     // Change Screen to Setting Screen later
@@ -64,19 +64,19 @@ void App::processEvents() {
             window.close();
             break;
         }
-        // screens[currentScreenId]->handleEvent(window, event);
+        screens[currentScreenId]->handleEvent(window, event);
     }
 }
 
 void App::update() {
-    // screens[currentScreenId]->update(window);
+    screens[currentScreenId]->update(window);
 }
 
 // Render
 void App::render() {
     window.clear(constant::BLACK);
 
-    // screens[currentScreenId]->draw(window);
+    screens[currentScreenId]->draw(window);
 
     window.display();
 }
