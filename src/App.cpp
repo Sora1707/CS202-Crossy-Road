@@ -20,7 +20,7 @@ App::App() {
     screens[(int)constant::Screen::Game]->setSoundPlayer(&soundPlayer);
 
     // Start at Menu Screen when game opens
-    currentScreenId = (int)constant::Screen::Game;
+    currentScreenId = (int)constant::Screen::Menu;
 
     std::string bgmFile = "resource/music/Leap to the Beat.mp3";
     if (!bgm.openFromFile(bgmFile)) {
@@ -69,7 +69,46 @@ void App::processEvents() {
 }
 
 void App::update() {
+    if (screens[currentScreenId]->getIsExit()) close();
+
     screens[currentScreenId]->update(window);
+
+    int isActiveId = screens[currentScreenId]->getCurrentScreenId();
+
+    std::shared_ptr<GameScreen> tmpGameScreen = std::dynamic_pointer_cast<GameScreen>(screens[isActiveId]);
+    if (tmpGameScreen) {
+        if (tmpGameScreen->needNewGame()) {
+            std::cout << constant::INFO << "Start a new game\n";
+            Player& player = Player::getInstance();
+            player.setIsDead(false);
+
+            int newHighestScore = std::max(player.getHighestScore(), player.getScore());
+            // std::cout << newHighestScore << "\n";
+            player.setHighestScore(newHighestScore);
+
+            tmpGameScreen = std::make_shared<GameScreen>();
+            tmpGameScreen->setIsPause(false);
+            tmpGameScreen->setSoundPlayer(&soundPlayer);
+
+            screens[isActiveId] = tmpGameScreen;
+        }
+    }
+
+    if (currentScreenId == isActiveId) return;
+
+    /* CHANGE SCREEN */
+    // Set the current screen back to its state
+    screens[currentScreenId]->setCurrentScreenId(currentScreenId);
+
+    // Set the previous screen of the currently active screen
+    screens[isActiveId]->setPrevScreenId(currentScreenId);
+
+    // Change to the currently active screen
+    currentScreenId = isActiveId;
+
+    if (tmpGameScreen) {
+        tmpGameScreen->setIsPause(false);
+    }
 }
 
 // Render
