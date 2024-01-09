@@ -17,6 +17,9 @@
     <Filter Include="Components">
       <UniqueIdentifier>{fe59fadd-717a-4aa0-ae6f-bcb823073352}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SettingScreen">
+      <UniqueIdentifier>{5bc421ce-23d1-47e9-91b3-4732f7c2d078}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -79,6 +82,9 @@
     <ClCompile Include="src\Components\Label.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="src\SettingScreen.cpp">
+      <Filter>SettingScreen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h">
@@ -137,6 +143,9 @@
     </ClInclude>
     <ClInclude Include="src\Components\Label.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SettingScreen.h">
+      <Filter>SettingScreen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
