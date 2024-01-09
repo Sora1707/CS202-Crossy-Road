@@ -78,6 +78,13 @@ namespace constant {
     };
 }
 
+namespace constant {
+    const std::string SAVED_FOLDER       = "data/";
+    const std::string SAVED_SETTING_FILE = SAVED_FOLDER + "setting.txt";
+    const std::string SAVED_PLAYER_FILE  = SAVED_FOLDER + "player.txt";
+    const std::string SAVED_TILES_FILE   = SAVED_FOLDER + "tiles.txt";
+} // namespace constant
+
 namespace Textures {
     enum class Player {
         StartIndex = 1000,

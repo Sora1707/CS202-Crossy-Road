@@ -4,18 +4,17 @@ App::App() {
     window.create(sf::VideoMode(constant::APP_WIDTH, constant::APP_HEIGHT), constant::APP_TITLE);
     window.setFramerateLimit(constant::APP_FPS);
 
+    load();
+
     /* MENU */
-    // Change Screen to Menu Screen later
     screens[(int)constant::Screen::Menu] = std::make_shared<MenuScreen>(); 
     screens[(int)constant::Screen::Menu]->setSoundPlayer(&soundPlayer);
 
     /* SETTING */
-    // Change Screen to Setting Screen later
     screens[(int)constant::Screen::Setting] = std::make_shared<SettingScreen>(); 
     screens[(int)constant::Screen::Setting]->setSoundPlayer(&soundPlayer);
 
     /* GAME */
-    // Change Screen to Game Screen later
     screens[(int)constant::Screen::Game] = std::make_shared<GameScreen>(); 
     screens[(int)constant::Screen::Game]->setSoundPlayer(&soundPlayer);
 
@@ -50,11 +49,105 @@ void App::run() {
         render();
     }
 
+    save();
+
     std::cout << constant::INFO << "App closing...\n";
 }
 
 void App::close() {
     window.close();
+}
+
+void App::save() {
+    saveSetting();
+    savePlayer();
+    saveTiles();
+}
+
+void App::load() {
+    loadSetting();
+    loadPlayer();
+    loadTiles();
+}
+
+void App::saveSetting() {
+    // volume
+    std::ofstream output;
+    output.open(constant::SAVED_SETTING_FILE);
+    if (!output) {
+        std::cout << constant::ERROR << "Cannot open " << constant::SAVED_SETTING_FILE << "\n";
+        output.close();
+        return;
+    }
+
+    output << soundPlayer.getVolume() << '\n';
+
+    output.close();
+}
+
+void App::savePlayer() {
+    // score
+    // highestScore
+    // textureId
+    std::ofstream output;
+    output.open(constant::SAVED_PLAYER_FILE);
+    if (!output) {
+        std::cout << constant::ERROR << "Cannot open " << constant::SAVED_PLAYER_FILE << "\n";
+        output.close();
+        return;
+    }
+
+    Player& player = Player::getInstance();
+    output << player.getScore() << '\n';
+    output << player.getHighestScore() << '\n';
+    output << player.getPlayerTextureId() << '\n';
+    output.close();
+}
+
+void App::saveTiles() {
+}
+
+void App::loadSetting() {
+    // volume
+    std::ifstream input;
+    input.open(constant::SAVED_SETTING_FILE);
+    if (!input) {
+        std::cout << constant::ERROR << "Cannot open " << constant::SAVED_SETTING_FILE << "\n";
+        input.close();
+        return;
+    }
+
+    float volume;
+    input >> volume;
+    soundPlayer.setVolume(volume);
+
+    input.close();
+}
+
+void App::loadPlayer() {
+    // score
+    // highestScore
+    // textureId
+    std::ifstream input;
+    input.open(constant::SAVED_PLAYER_FILE);
+    if (!input) {
+        std::cout << constant::ERROR << "Cannot open " << constant::SAVED_PLAYER_FILE << "\n";
+        input.close();
+        return;
+    }
+
+    Player& player = Player::getInstance();
+
+    int score, highestScore, playerTextureId;
+
+    input >> score >> highestScore >> playerTextureId;
+    player.setScore(score);
+    player.setHighestScore(highestScore);
+    player.setPlayerTextureId(playerTextureId);
+    input.close();
+}
+
+void App::loadTiles() {
 }
 
 void App::processEvents() {

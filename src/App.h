@@ -8,9 +8,10 @@
 #include "Screen.h"
 #include "MenuScreen/MenuScreen.h"
 #include "Game/Player.h"
-#include <iostream>
 #include "SettingScreen/SettingScreen.h"
 #include "GameScreen/GameScreen.h"
+#include <iostream>
+#include <fstream>
 
 class App {
 public:
@@ -20,6 +21,18 @@ public:
 public: 
     void run();
     void close();
+    void save();
+    void load();
+
+private:
+    void saveSetting();
+    void savePlayer();
+    void saveTiles();
+
+private:
+    void loadSetting();
+    void loadPlayer();
+    void loadTiles();
 
 private:
     sf::RenderWindow window;
