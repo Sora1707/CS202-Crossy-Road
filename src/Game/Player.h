@@ -5,9 +5,9 @@
 #include "../TextureHolder.h"
 #include "Entity.h"
 #include "Movable.h"
-//#include "Lane/Lane.h"
-//#include "Lane/SpawnLane.h"
-//#include "Lane/RiverLane.h"
+#include "Lane/Lane.h"
+#include "Lane/SpawnLane.h"
+#include "Lane/RiverLane.h"
 #include "../SoundPlayer.h"
 
 class Player : public Entity, public Movable  {
@@ -34,7 +34,7 @@ public:
     void handleEvent(sf::RenderWindow& window, sf::Event& event);
 
 public:
-    // void setLanes(std::deque<Lane*> &lanes);
+    void setLanes(std::deque<Lane*>& lanes);
 
     void setIsDead(bool state);
     void setIsMounting(bool state);
@@ -75,7 +75,7 @@ private:
 private:
     bool isDead;
     sf::Vector2f enviVelocity;
-    // std::deque<Lane*>* lanes;
+     std::deque<Lane*>* lanes;
     SoundPlayer* soundPlayer;
 
     bool isMounting;

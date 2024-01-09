@@ -16,11 +16,11 @@ App::App() {
 
     /* GAME */
     // Change Screen to Game Screen later
-    /*screens[(int)constant::Screen::Game] = std::make_shared<Screen>(); 
-    screens[(int)constant::Screen::Game]->setSoundPlayer(&soundPlayer);*/
+    screens[(int)constant::Screen::Game] = std::make_shared<GameScreen>(); 
+    screens[(int)constant::Screen::Game]->setSoundPlayer(&soundPlayer);
 
     // Start at Menu Screen when game opens
-    currentScreenId = (int)constant::Screen::Menu;
+    currentScreenId = (int)constant::Screen::Game;
 
     std::string bgmFile = "resource/music/Leap to the Beat.mp3";
     if (!bgm.openFromFile(bgmFile)) {

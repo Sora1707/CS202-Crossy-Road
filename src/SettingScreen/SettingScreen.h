@@ -1,17 +1,17 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "/HK4/CS202/CS202-Crossy-Road/src/Constant.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/Components/Button.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/Components/ImageButton.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/Components/Label.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/TextureHolder.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/Game/Player.h"
-#include "/HK4/CS202/CS202-Crossy-Road/src/Util/sfml.h"
+#include "../Constant.h"
+#include "../Components/Button.h"
+#include "../Components/ImageButton.h"
+#include "../Components/Label.h"
+#include "../TextureHolder.h"
+#include "../Game/Player.h"
+#include "../Util/sfml.h"
+#include "../Screen.h"
 #include <map>
 #include <iostream>
 #include <string>
 
-#include "/HK4/CS202/CS202-Crossy-Road/src/Screen.h"
 
 class SettingScreen : public Screen {
 private:

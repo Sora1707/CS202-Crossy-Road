@@ -6,10 +6,12 @@
 #include "SoundHolder.h"
 #include "SoundPlayer.h"
 #include "Screen.h"
-#include "MenuScreen.h"
+#include "MenuScreen/MenuScreen.h"
 #include "Game/Player.h"
 #include <iostream>
-#include "SettingScreen.h"
+#include "SettingScreen/SettingScreen.h"
+#include "GameScreen/GameScreen.h"
+
 class App {
 public:
     App();

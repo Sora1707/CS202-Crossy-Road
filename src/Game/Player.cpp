@@ -53,13 +53,13 @@ void Player::move() {
         return;
     }
 
-   /* if (!lanes) return;
+    if (!lanes) return;
     for (Lane* lane : *lanes) {
         if (lane->collide(*this)) {
             setPosition(originalPos);
             return;
         }
-    }*/
+    }
 
     if (direction == Direction::Down) --score;
     else if (direction == Direction::Up) ++score;
@@ -75,7 +75,7 @@ void Player::enviMove() {
 }
 
 void Player::update() {
-    /*bool isMounting = false;
+    bool isMounting = false;
 
     for (int i = 0; i < lanes->size(); ++i) {
         Lane* lane           = (*lanes)[i];
@@ -112,7 +112,7 @@ void Player::update() {
     if (!isMounting) {
         enviVelocity.x = 0;
     }
-    enviMove();*/
+    enviMove();
 }
 
 void Player::handleEvent(sf::RenderWindow& window, sf::Event& event) {
@@ -137,9 +137,9 @@ void Player::handleEvent(sf::RenderWindow& window, sf::Event& event) {
     }
 }
 
-//void Player::setLanes(std::deque<Lane*>& lanes) {
-//    this->lanes = &lanes;
-//}
+void Player::setLanes(std::deque<Lane*>& lanes) {
+    this->lanes = &lanes;
+}
 
 void Player::setIsDead(bool state) {
     this->isDead = state;
