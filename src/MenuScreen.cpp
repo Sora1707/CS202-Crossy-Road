@@ -48,7 +48,7 @@ void MenuScreen::handleEvent(sf::RenderWindow& window, sf::Event& event) {
     }
 
     // Mouse events
-    /*if (buttons[(int)Type::Play].isClicked(window)) setCurrentScreenId((int)constant::Screen::Game);
+    *if (buttons[(int)Type::Play].isClicked(window)) setCurrentScreenId((int)constant::Screen::Game);
     if (buttons[(int)Type::Play].isClicked(window)) setCurrentScreenId((int)constant::Screen::Setting);
     if (buttons[(int)Type::Exit].isClicked(window)) exit(0);*/
 }
